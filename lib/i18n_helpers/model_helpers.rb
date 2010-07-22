@@ -2,14 +2,7 @@ module I18nHelpers
   module ModelHelpers
   
     def self.included(base)
-      base.send :extend,  ClassMethods
       base.send :include, InstanceMethods
-    end
-  
-    module ClassMethods
-      def err(err_name,scope=[])
-         I18n.t(err_name.to_s, :scope => [:activerecord, :errors, model_name.downcase.to_sym, :attributes] << scope)
-      end
     end
   
     module InstanceMethods
@@ -23,6 +16,10 @@ module I18nHelpers
           end
         end
         errors
+      end
+      
+      def err(err_name,scope=[])
+         I18n.t(err_name.to_s, :scope => [:activerecord, :errors, model_name.downcase.to_sym, :attributes] << scope)
       end
     end
   end
