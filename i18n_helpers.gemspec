@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "i18n_helpers.gemspec",
      "lib/i18n_helpers.rb",
      "lib/i18n_helpers/controller_and_view_helpers.rb",
      "lib/i18n_helpers/model_helpers.rb",
