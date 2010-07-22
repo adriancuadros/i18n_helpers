@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "i18n_helpers"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{TODO: Helpers that put i18n into the controller and action context}
+    gem.description = %Q{TODO: Helpers that put i18n into the controller and action context. Need some help on this.}
     gem.email = "adrian@innku.com"
     gem.homepage = "http://github.com/adriancuadros/i18n_helpers"
     gem.authors = ["Adrian Cuadros"]
