@@ -4,7 +4,7 @@ module I18nHelpers
     def self.included(base)
       base.send :include, InstanceMethods
     end
-  
+    
     module InstanceMethods
       def local_errors()
         errors = { }
@@ -19,7 +19,7 @@ module I18nHelpers
       end
       
       def err(err_name,scope=[])
-         I18n.t(err_name.to_s, :scope => [:activerecord, :errors, model_name.downcase.to_sym, :attributes] << scope)
+         I18n.t(err_name.to_s, :scope => [:activerecord, :errors, self.class.to_s.downcase.to_sym, :attributes] << scope)
       end
     end
   end
