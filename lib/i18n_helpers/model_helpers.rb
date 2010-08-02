@@ -3,6 +3,13 @@ module I18nHelpers
   
     def self.included(base)
       base.send :include, InstanceMethods
+      base.send :extend, ClassMethods
+    end
+    
+    module ClassMethods
+      def attr_name(att_name)
+        I18n.t(att_name.to_s, :scope => [:activerecord, :attributes, self.name.downcase])
+      end
     end
     
     module InstanceMethods
